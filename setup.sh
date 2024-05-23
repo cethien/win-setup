@@ -2,6 +2,10 @@
 
 ## setup ubuntu/debian in wsl
 
+git init -b wsl &&
+    git remote add origin https://github.com/cethien/dotfiles.git &&
+    git pull --set-upsteam origin wsl
+
 # install nala
 sudo apt update &&
     sudo apt install -y nala

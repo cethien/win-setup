@@ -26,6 +26,10 @@ sh <(curl -fsSL https://nixos.org/nix/install) --no-daemon &&
     home-manager switch &&
     rm -rf result
 
+# add windows ssh-passthru
+curl -fsSL https://gist.githubusercontent.com/Jaykul/19e9f18b8a68f6ab854e338f9b38ca7b/raw/ssh-agent-pipe.sh | sudo tee /usr/local/bin/ssh-agent-pipe >/dev/null &&
+sudo chmod +x /usr/local/bin/ssh-agent-pipe
+
 # remove sudo pw prompt
 echo "$USER ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/"$USER" >/dev/null
 

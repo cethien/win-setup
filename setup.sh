@@ -5,8 +5,8 @@
 git init -b wsl &&
     git remote add origin https://github.com/cethien/dotfiles.git &&
     git fetch &&
-    git branch --set-upstream-to=origin/wsl wsl &&
-    git pull
+    git pull origin wsl &&
+    git branch --set-upstream-to=origin/wsl wsl
 
 # install nala
 sudo apt update &&

@@ -16,7 +16,7 @@ sudo nala update &&
 
 # nix + home manager
 sh <(curl -fsSL https://nixos.org/nix/install) --no-daemon &&
-    echo "experimental-features = nix-command flakes" >> $XDG_CONFIG_HOME/nix/nix.conf
+    echo "experimental-features = nix-command flakes" >> $HOME/.config/nix/nix.conf
     mv "$HOME"/.bashrc "$HOME"/.bashrc_default &&
     mv "$HOME"/.profile "$HOME"/.profile_default &&
     . "$HOME"/.nix-profile/etc/profile.d/nix.sh &&

@@ -15,7 +15,7 @@ sudo nala update &&
     sudo nala upgrade -y
 
 # nix + home manager
-sh <(curl -fsSL https://nixos.org/nix/install) --no-daemon &&
+curl -fsSL https://nixos.org/nix/install | bash /dev/stdin --no-daemon &&
     mkdir -p $HOME/.config/nix &&
     echo "experimental-features = nix-command flakes" >> $HOME/.config/nix/nix.conf &&
     mv "$HOME"/.bashrc "$HOME"/.bashrc_default &&

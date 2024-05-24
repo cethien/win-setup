@@ -3,7 +3,7 @@
 ## setup ubuntu/debian in wsl
 
 git init -b wsl &&
-    git remote add origin https://github.com/cethien/dotfiles.git &&
+    git remote add origin https://github.com/$USER/dotfiles.git &&
     git pull origin wsl
 
 # install nala
@@ -21,7 +21,7 @@ curl -fsSL https://nixos.org/nix/install | bash /dev/stdin --no-daemon &&
     mv "$HOME"/.bashrc "$HOME"/.bashrc_default &&
     mv "$HOME"/.profile "$HOME"/.profile_default &&
     . "$HOME"/.nix-profile/etc/profile.d/nix.sh &&
-    nix build .config/home-manager#homeConfigurations.cethien.activationPackage &&
+    nix build .config/home-manager#homeConfigurations.$USER.activationPackage &&
     result/activate &&
     home-manager switch &&
     rm -rf result
